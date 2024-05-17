@@ -1,0 +1,104 @@
+[
+  {
+    "_id": 121,
+    "name": "English",
+    "exams": ["english1", "english2", "english3"],
+    "instructor": { "id": 240001, "name": "Emily Johnson" }
+  },
+  {
+    "_id": 122,
+    "name": "German",
+    "exams": ["german1", "german2", "german3"],
+    "instructor": { "id": 240002, "name": "Michael Brown" }
+  },
+  {
+    "_id": 123,
+    "name": "Cpp",
+    "exams": ["cpp1", "cpp2", "cpp3"],
+    "instructor": { "id": 240003, "name": "Jennifer Martinez" }
+  },
+  {
+    "_id": 124,
+    "name": "Java",
+    "exams": ["java1", "java2", "java3"],
+    "instructor": { "id": 240004, "name": "Christopher Davis" }
+  },
+  {
+    "_id": 125,
+    "name": "Csharp",
+    "exams": ["csharp1", "csharp2", "csharp3"],
+    "instructor": { "id": 240005, "name": "Amanda Rodriguez" }
+  },
+  {
+    "_id": 126,
+    "name": "Python",
+    "exams": ["python1", "python2", "python3"],
+    "instructor": { "id": 240006, "name": "Daniel Wilson" }
+  },
+  {
+    "_id": 127,
+    "name": "Masscommunication",
+    "exams": ["masscommunication1", "masscommunication2", "masscommunication3"],
+    "instructor": { "id": 240007, "name": "Sarah Anderson" }
+  },
+  {
+    "_id": 128,
+    "name": "Digitalmarketing",
+    "exams": ["digitalmarketing1", "digitalmarketing2", "digitalmarketing3"],
+    "instructor": { "id": 240008, "name": "Matthew Taylor" }
+  },
+  {
+    "_id": 129,
+    "name": "Machinelearning",
+    "exams": ["machinelearning1", "machinelearning2", "machinelearning3"],
+    "instructor": { "id": 240009, "name": "Jessica Thomas" }
+  },
+  {
+    "_id": 130,
+    "name": "Htmlandcss",
+    "exams": ["htmlandcss1", "htmlandcss2", "htmlandcss3"],
+    "instructor": { "id": 240010, "name": "David Garcia" }
+  },
+  {
+    "_id": 131,
+    "name": "React",
+    "exams": ["react1", "react2", "react3"],
+    "instructor": { "id": 240011, "name": "Ashley Jackson" }
+  },
+  {
+    "_id": 132,
+    "name": "Python2",
+    "exams": ["python1", "python2", "python3"],
+    "instructor": { "id": 240012, "name": "James White" }
+  },
+  {
+    "_id": 133,
+    "name": "English2",
+    "exams": ["english1", "english2", "english3"],
+    "instructor": { "id": 240013, "name": "Stephanie Harris" }
+  },
+  {
+    "_id": 134,
+    "name": "Uiandux",
+    "exams": ["uiandux1", "uiandux2", "uiandux3"],
+    "instructor": { "id": 240014, "name": "Robert Lee" }
+  },
+  {
+    "_id": 135,
+    "name": "Flutter",
+    "exams": ["flutter1", "flutter2", "flutter3"],
+    "instructor": { "id": 240015, "name": "Nicole Moore" }
+  },
+  {
+    "_id": 136,
+    "name": "Javascript",
+    "exams": ["javascript1", "javascript2", "javascript3"],
+    "instructor": { "id": 240016, "name": "William Clark" }
+  },
+  {
+    "_id": 137,
+    "name": "Nodejs",
+    "exams": ["nodejs1", "nodejs2", "nodejs3"],
+    "instructor": { "id": 240017, "name": "Melissa Lewis" }
+  }
+]

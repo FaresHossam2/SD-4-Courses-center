@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Bootstrap Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="css/register.css" />
+    <link rel="stylesheet" href="css/fa.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&#038;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .error {
+        color: red;
+        height: 5px;
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact" id="contact">
+      <div class="container">
+        <div class="tittle">
+          <h1>Create Account</h1>
+        </div>
+
+        <div class="content">
+          <form
+            id="signInForm"
+            action="/register"
+            method="post"
+            onsubmit="return validateForm()"
+          >
+            <div class="row">
+              <div class="col">
+                <span id="fnameError" class="error"></span>
+                <input
+                  type="text"
+                  class="main-input"
+                  placeholder="First name"
+                  name="fname"
+                />
+              </div>
+              <div class="col">
+                <span id="lnameError" class="error"></span>
+                <input
+                  type="text"
+                  class="main-input"
+                  placeholder="Last name"
+                  name="lname"
+                />
+              </div>
+            </div>
+            <span id="emailError" class="error"></span>
+            <input
+              class="main-input"
+              type="email"
+              name="email"
+              placeholder="Your Email"
+            />
+            <span id="usernameError" class="error"></span>
+            <input
+              class="main-input"
+              type="text"
+              name="username"
+              placeholder="Username "
+            />
+            <div class="row">
+              <div class="col">
+                <span id="passwordError" class="error"></span>
+                <input
+                  type="password"
+                  class="main-input"
+                  placeholder="Password"
+                  name="password"
+                />
+              </div>
+              <div class="col">
+                <span id="confirmPasswordError" class="error"></span>
+                <input
+                  type="password"
+                  class="main-input"
+                  placeholder="Confirm Password"
+                  name="confirmpassword"
+                />
+              </div>
+            </div>
+            <a href="/login">
+              <input class="signup" type="submit" value="Sign up" />
+            </a>
+            <div class="or">
+              <div class="txt">
+                <h4><span></span> sign up with</h4>
+              </div>
+              <div class="social">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+              <div class="already">
+                <h4>already have an Account ? <a href="/login">sign in</a></h4>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+      function validateForm() {
+        var fname = document.forms["signInForm"]["fname"].value;
+        var lname = document.forms["signInForm"]["lname"].value;
+        var email = document.forms["signInForm"]["email"].value;
+        var username = document.forms["signInForm"]["username"].value;
+        var password = document.forms["signInForm"]["password"].value;
+        var confirmPassword =
+          document.forms["signInForm"]["confirmpassword"].value;
+
+        var isValid = true;
+
+        if (fname == "") {
+          document.getElementById("fnameError").innerHTML =
+            "First name is required";
+          isValid = false;
+        } else {
+          document.getElementById("fnameError").innerHTML = "";
+        }
+
+        if (lname == "") {
+          document.getElementById("lnameError").innerHTML =
+            "Last name is required";
+          isValid = false;
+        } else {
+          document.getElementById("lnameError").innerHTML = "";
+        }
+
+        if (email == "") {
+          document.getElementById("emailError").innerHTML = "Email is required";
+          isValid = false;
+        } else {
+          document.getElementById("emailError").innerHTML = "";
+        }
+
+        if (username == "") {
+          document.getElementById("usernameError").innerHTML =
+            "Username is required";
+          isValid = false;
+        } else {
+          document.getElementById("usernameError").innerHTML = "";
+        }
+
+        if (password == "") {
+          document.getElementById("passwordError").innerHTML =
+            "Password is required";
+          isValid = false;
+        } else {
+          document.getElementById("passwordError").innerHTML = "";
+        }
+
+        if (confirmPassword == "") {
+          document.getElementById("confirmPasswordError").innerHTML =
+            "Confirm password is required";
+          isValid = false;
+        } else if (password != confirmPassword) {
+          document.getElementById("confirmPasswordError").innerHTML =
+            "Passwords do not match";
+          isValid = false;
+        } else if (password.length < 6) {
+          document.getElementById("passwordError").innerHTML =
+            "Password should be at least 6 characters";
+          isValid = false;
+        } else {
+          document.getElementById("confirmPasswordError").innerHTML = "";
+        }
+
+        return isValid;
+      }
+    </script>
+  </body>
+</html>
